@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularfirebase-b6f51": {
+      "hosting": {
+        "LabNote": [
+          "angularfirebase-b6f51"
+        ]
+      }
+    }
+  }
+}

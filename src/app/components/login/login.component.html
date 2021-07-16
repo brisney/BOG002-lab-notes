@@ -1,20 +1,14 @@
-<!-- <h1>Hola mundo</h1>
-<p>login works!</p> -->
-<!-- <app-sidenav></app-sidenav> -->
-<!-- <div> -->
-    <div class="formLogin">
-      <div class="mb-3 row">
-        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10"><input type="text" class="form-control" /></div>
-      </div>
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
-            <input type="password" class="form-control" /></div>
-      </div>
-      <div class="d-grid gap-2 d-md-flex">
-        <button class="btn btn-primary">Login with Google</button>
-        <button class="btn btn-primary">Login with Email</button>
-      </div>
-    </div>
-<!-- </div> -->
+   <div class="formLogin">
+  <h1>Iniciar sesión</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+  <input type="texto" formControlName="email" placeholder="correo electrónico" class="email"/>
+  <input type="password" formControlName="password" placeholder="Contraseña" class="password"/>
+  <button type="submit" class="login">Continuar</button>
+</form>
+<p class="texto">O</p>
+<button class="loginGoogle">Ingresar con Google</button>
+</div>
+   
+
+
+     

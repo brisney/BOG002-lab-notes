@@ -1,0 +1,28 @@
+.formRegister{
+    top:100vh; 
+    display:flex;
+    flex-direction:column;
+    padding:20VW;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+input{
+    height: 5vh;
+    font-size: 28px;
+}
+.email{
+    margin-top:2vh;
+}
+
+.password{
+    margin-top:1.9vh;
+}
+.register{
+    margin-top:2vh;
+    background: #D2BCBC;
+    height: 5vh;
+    font-size: 28px;  
+}

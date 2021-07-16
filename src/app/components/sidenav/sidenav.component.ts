@@ -1,6 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit, Input } from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
-// import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
@@ -8,50 +6,15 @@ import {MediaMatcher} from '@angular/cdk/layout';
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.css']
 })
-// export class SidenavComponent implements OnInit {
- 
-//   // shouldRun = true;
 
 
-//   constructor() { }
-
-//   ngOnInit(): void {
-//     this.burgerMenuClick();
-//   }
-
-//   burgerMenuClick() {
-
-//   }
-
-// }
-//   }
-
-// }
 
 export class SidenavComponent implements OnInit {
  
-  // shouldRun = true;
-  
 
-  constructor() { 
-    // @Input() name: string;
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-    //     this.burgerMenuClick();
-    //   }
-}
+  ngOnInit(): void {}
 
 
-//   constructor() { }
-
-//   ngOnInit(): void {
-//     this.burgerMenuClick();
-//   }
-
-//   burgerMenuClick() {
-
-//   }
-
-// }
 }
