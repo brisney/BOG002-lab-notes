@@ -64,3 +64,10 @@ top: 0.3em;
     width: 64vw;
     font-size: 30px;  
 }
+.imgGoogle{
+    width: 8vw;
+    height: 6vh;
+    position: absolute;
+    margin-top: 67.2vh;
+    margin-left: 5vw;
+}

@@ -1,22 +1,22 @@
 
 .contents{
+    /* top:100vh;  */
     display:flex;
     flex-direction:column;
-   align-content: space-between;
-    top: 50em;
-    padding: 5vw;    
+    padding:18VW
 }
 
 .imgHome{
-    width: 50vw;
-    height: 25vh;
+    width: 63vw;
+    height: 32vh;
 }
 .title{
-    font-size: 30px;
-    margin-top: 5vh;
+    font-size: 32px;
+    margin-top: 6vh;
+    text-align: center;
 
 }
 .paragraph{
     font-size: 20px;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }

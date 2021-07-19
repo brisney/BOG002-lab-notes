@@ -1,5 +1,8 @@
 .formRegister{
-    padding:18vw;
+    top:100vh; 
+    display:flex;
+    flex-direction:column;
+    padding:18VW;
 }
 .imgRegister{
     width: 26vw;
