@@ -10,12 +10,12 @@ import { userI } from 'src/assets/user.interface';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  constructor(private auth: AuthService, private route: Router) {}
+  constructor(public auth: AuthService, private route: Router) {}
 
 
   formRegister = new FormGroup({
-  emailUser: new FormControl('', Validators.required),
-  passwordUser: new FormControl('', Validators.required),
+  email: new FormControl('', Validators.required),
+  password: new FormControl('', Validators.required),
 });
 
 
@@ -23,11 +23,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister(form: userI) {
+    console.log(form)
     this.auth
   .registerByEmail(form)
       .then((re) => {
         console.log('registro exitoso', re);
-        this.route.navigate(['/']);
+        this.route.navigate(['/Notes']);
       })
       .catch((er) => console.log('registro no exitoso', er));
   }

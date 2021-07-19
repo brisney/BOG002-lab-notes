@@ -25,10 +25,22 @@ export class LoginComponent implements OnInit {
       .loginByEmail(form)
       .then((res) => {
         console.log('login exitoso', res);
-        this.route.navigate(['/Inicio']);
+        this.route.navigate(['/Notes']);
       })
       .catch((err) => console.log('login no exitoso', err));
   }
+
+  onGoogleLogin(){
+    this.auth
+      .loginWithGoogle()
+      .then((res) => {
+        console.log('login con google exitoso', res);
+        this.route.navigate(['/Notes']);
+      })
+      .catch((err) => console.log('login con google no exitoso', err));
+  }
+
+  // }
 }
 
 

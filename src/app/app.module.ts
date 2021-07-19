@@ -18,6 +18,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AuthService } from 'src/app/services/auth.service';
+import { NotesComponent } from './components/notes/notes.component';
+import { NotesGuard } from './guards/guard.notes/notes.guard';
+import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
 
 
 @NgModule({
@@ -27,6 +30,7 @@ import { AuthService } from 'src/app/services/auth.service';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
+    NotesComponent,
 
   ],
   imports: [
@@ -38,7 +42,7 @@ import { AuthService } from 'src/app/services/auth.service';
     ReactiveFormsModule
   
   ],
-  providers: [AuthService],
+  providers: [AuthService, NotesGuard, CheckloginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

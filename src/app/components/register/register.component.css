@@ -1,28 +1,33 @@
 .formRegister{
-    top:100vh; 
-    display:flex;
-    flex-direction:column;
-    padding:20VW;
+    padding:18vw;
+}
+.imgRegister{
+    width: 26vw;
+    height: 21vh;
+    margin-left: 20vw;
 }
 h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 47px;
+    margin: 2.6vh;
 }
 
 input{
-    height: 5vh;
-    font-size: 28px;
+    height: 7vh;
+    width: 63vw;
+    font-size: 30px;
 }
 .email{
     margin-top:2vh;
 }
 
 .password{
-    margin-top:1.9vh;
+    margin-top:2vh;
 }
 .register{
-    margin-top:2vh;
+    margin-top:2.5vh;
     background: #D2BCBC;
-    height: 5vh;
-    font-size: 28px;  
+    height: 7vh;
+    width: 64vw;
+    font-size: 30px;
 }

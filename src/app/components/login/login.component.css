@@ -2,55 +2,65 @@
     top:100vh; 
     display:flex;
     flex-direction:column;
-    padding:20VW;
+    padding:17VW;
+}
+.imgLogin{
+    width: 26vw;
+    height: 21vh;
+    margin-left: 20vw;
 }
 h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 47px;
+    margin: 2.6vh;
 }
 
 input{
-    height: 5vh;
-    font-size: 28px;
+    height: 7vh;
+    width: 63vw;
+    font-size: 30px
 }
 .email{
-    margin-top:2vh;
+    margin-top:3vh;
 }
 
 .password{
-    margin-top:1.9vh;
+    margin-top:2vh;
 }
 .login{
     margin-top:2vh;
     background: #D2BCBC;
-    height: 5vh;
-    font-size: 28px;  
+    height: 7vh;
+    width: 64vw;
+    font-size: 30px;
 }
 .texto{
     display:inline-block;
     position: relative;
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 3vh;
     font-size: 28px; 
 
 }
 .texto::after,.texto::before{
 content:'';
 position:absolute;
-width: 27vw;
+width: 26vw;
 height: 0.2vh;
 background-color: black;
 top: 0.3em;
 }
 .texto::before{
-    left: 2px;
+    left: 4px;
 }
 .texto::after{
-    right: 2px; 
+    right: 14px; 
 
 }
 .loginGoogle{
-    margin-top:1.9vh;
-    height: 5vh;
-    font-size: 28px;  
+    margin-top:2vh;
+    background: #ffffff;
+    height: 7vh;
+    width: 64vw;
+    font-size: 30px;  
 }

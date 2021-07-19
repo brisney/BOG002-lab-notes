@@ -1,8 +1,9 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable, } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument,} from '@angular/fire/firestore';
-import { observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { userI } from 'src/assets/user.interface';
+import firebase from 'firebase/app';
 
 
 @Injectable({
@@ -10,12 +11,8 @@ import { userI } from 'src/assets/user.interface';
 })
 
 export class AuthService {
-  userState: any = null;
-
+ 
   constructor(private auth: AngularFireAuth) {
-    this.auth.authState.subscribe((auth) => {
-      this.userState = auth;
-    });
   }
 
   registerByEmail(user: userI) {
@@ -23,16 +20,32 @@ export class AuthService {
     return this.auth.createUserWithEmailAndPassword(email, password);
   }
 
-
   loginByEmail(user: userI) {
     const { email, password } = user;
     return this.auth.signInWithEmailAndPassword(email, password);
   }
 
+  loginWithGoogle(){
+    return this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider)
+  }
 
   logout() {
-    this.auth.signOut();
+    return this.auth.signOut();
   }
+
+  hasUser(){
+    return this.auth.authState;
+  }
+
+  // get isLoggedIn(): boolean {
+  //   const use= 'string'
+  //   const user = JSON.parse(localStorage.getItem('use'));
+  //   return (user !== null) ? true : false;
+  // }
+
+  // isL(){
+  //   return this.auth.authState;
+  // }
 }
 
 

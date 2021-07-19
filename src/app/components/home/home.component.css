@@ -1,0 +1,22 @@
+
+.contents{
+    display:flex;
+    flex-direction:column;
+   align-content: space-between;
+    top: 50em;
+    padding: 5vw;    
+}
+
+.imgHome{
+    width: 50vw;
+    height: 25vh;
+}
+.title{
+    font-size: 30px;
+    margin-top: 5vh;
+
+}
+.paragraph{
+    font-size: 20px;
+    margin-top: 5vh;
+}
