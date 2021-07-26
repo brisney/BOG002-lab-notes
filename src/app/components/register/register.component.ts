@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/auth.services/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { userI } from 'src/assets/user.interface';
 
@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   .registerByEmail(form)
       .then((re) => {
         console.log('registro exitoso', re);
-        this.route.navigate(['/Notes']);
+        this.route.navigate(['notas']);
       })
       .catch((er) => console.log('registro no exitoso', er));
   }

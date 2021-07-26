@@ -7,49 +7,45 @@ import { LoginComponent } from './components/login/login.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { NotesGuard } from './guards/guard.notes/notes.guard';
 import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
-
+import { CreatenotesComponent } from './components/createnotes/createnotes.component';
+// import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 
 const routes: Routes = [
   {
-    path:'',
-    redirectTo: 'Inicio',
-    pathMatch: 'full'
+    path: '',
+    redirectTo: 'inicio',
+    pathMatch: 'full',
   },
   {
-    path:'Inicio',
-
+    path: 'inicio',
     // canActivate:[CheckloginGuard],
-    component: HomeComponent
-  },
-  {path: 'Registrar',
-  // canActivate: [AuthGuard],
-  canActivateChild: [NotesGuard],
-  component: RegisterComponent
-
-  },
-  // {
-  //   path:'Registrar',
-  //   component: RegisterComponent, children: [
-  //     { path: 'Registrar', canActivate:[CheckloginGuard], component: RegisterComponent}
-  //     // { path: ':id', canActivate:[AuthGuard], component: ServerComponent }
-  //   // canActivate: [CheckloginGuard]   
-  //   ]
-  // },
-
-
-  {
-    path:'Iniciarsesion',
-    component: LoginComponent
+    component: HomeComponent,
   },
   {
-  path:'Notes',
-  canActivate: [NotesGuard],
-    component: NotesComponent
+    path: 'registrar',
+    // canActivate: [AuthGuard],
+    canActivateChild: [NotesGuard],
+    component: RegisterComponent,
+  },
+  
+  {
+    path: 'iniciar-sesion',
+    component: LoginComponent,
+  },
+  {
+    path: 'notas',
+    canActivate: [NotesGuard],
+    component: NotesComponent,
+  }, 
+  {
+    path: 'crear-nota',
+    component: CreatenotesComponent,
   }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

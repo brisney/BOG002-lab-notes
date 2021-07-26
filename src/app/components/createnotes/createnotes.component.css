@@ -1,0 +1,20 @@
+.form-Note{
+    padding: 15vw;
+    
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    /* padding: 40vw;
+    left: 15vw; */
+}
+input{
+    
+    width: 63vw;
+    font-size: 30px
+}
+.form-Title{
+    height: 5vh;
+}
+.formDescription{
+    height: 8vh; 
+}

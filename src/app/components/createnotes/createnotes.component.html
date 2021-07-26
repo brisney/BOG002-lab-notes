@@ -1,0 +1,16 @@
+<div class="form-Note">
+<form [formGroup]="formNote" (ngsubmit)="addNote()">
+  <div class="mb-3">
+    <input type="text" formControlName="title" class="form-Title" placeholder="Título de la nota">
+  </div>
+
+  <div class="mb-3">
+    <input type="text"formNote="description"class="formDescription" placeholder="Descripción  de la nota ">
+  </div>
+
+  <div class="mb-3">
+    <button type="submit"class="btn btn-primary">Crear nota</button>
+    <button class="btn-back"  routerLink="notas">Cancelar</button>
+  </div>
+</form> 
+</div>

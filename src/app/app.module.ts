@@ -14,13 +14,15 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/auth.services/auth.service';
 import { NotesComponent } from './components/notes/notes.component';
 import { NotesGuard } from './guards/guard.notes/notes.guard';
 import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
+import { NotesService } from './notes.services/notes.service';
+import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
     RegisterComponent,
     LoginComponent,
     NotesComponent,
+    CreatenotesComponent,
+
 
   ],
   imports: [
@@ -39,10 +43,11 @@ import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    ReactiveFormsModule
-  
+    ReactiveFormsModule,
+    FormsModule,
+    
   ],
-  providers: [AuthService, NotesGuard, CheckloginGuard],
+  providers: [AuthService, NotesService, NotesGuard, CheckloginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

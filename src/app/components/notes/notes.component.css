@@ -1,0 +1,22 @@
+.homeNotes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vw;
+
+}
+.imgNotes{
+    width: 9vw;
+    height: 9vh;
+}
+.buttonLogout{
+    margin: 2.7vh;
+    font-size: 3vw;
+    height: 3vh;
+     background: #D2BCBC;
+} 
+.listNotes{
+    margin: 8vh;
+    font-size: 5vw;
+
+}

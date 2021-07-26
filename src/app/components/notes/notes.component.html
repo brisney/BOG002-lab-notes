@@ -1,6 +1,46 @@
-<p>notes works!</p>
-
-<div class="HomeNotes">
-<h1>imagen</h1>
-<button (click)="logout()">Cerrar sesión</button>
+<div class="homeNotes">
+  <a routerLink="/crear-nota"
+    ><img class="imgNotes" src="./assets/imagen agregar notas.png"
+  /></a>
+  <h2 class="listNotes">Todas las notas</h2>
+  <button class="buttonLogout" (click)="logout()">Cerrar sesión</button>
 </div>
+<div>
+  <h2 *ngIf="notes.length == 0">No hay notas para mostrar</h2>
+  <ul class="notas" *ngIf="notes.length > 0">
+    <li *ngFor="let note of notes">
+      <!-- <span class="badge">{{ notes.title }}</span> !{{ notes.description }} -->
+      <span class="badge">{{ note.title }}</span>
+      <span class="badge">{{ note.description }}</span> 
+      <a [routerLink]="['/edit-note', note.id]">
+        <i class="far fa-edit"></i>
+      </a>
+      <button class="btn-delete" type="button" (click)="deleteNotes(note.id)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </li>
+  </ul>
+</div>
+<!-- <table class="table">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of collection.data | paginate: config">
+      <td>{{item.id}}</td>
+      <td>{{item.nombre}}</td>
+      <td>{{item.apellido}}</td> -->
+<!-- <td>  -->
+<!-- <button type="button" class="btn btn-primary" (click)="openEditar(content,item)">Editar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminar(item)">Eliminar</button>
+      </td>
+    </tr> -->
+<!-- </tbody> -->
+<!-- constructor( private http: HttpClient, private messageService: MessageService) {
+} /** GET heroes from the server */ getHeroes(): Observable<Hero[]>
+  { return this.http.get<Hero[]>(this.heroesUrl) } </Hero[]></Hero[]
+> -->
