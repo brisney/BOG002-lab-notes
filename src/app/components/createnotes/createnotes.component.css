@@ -18,3 +18,7 @@ input{
 .formDescription{
     height: 8vh; 
 }
+button{
+    width: 15vw;
+    height: 3vh;
+}

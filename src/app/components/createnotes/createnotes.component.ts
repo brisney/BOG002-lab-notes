@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
 import { NotesService } from 'src/app/notes.services/notes.service';
 import { Router } from '@angular/router';
+import { Notes } from 'src/assets/notes.interface';
 
 @Component({
   selector: 'app-createnotes',
@@ -9,35 +10,124 @@ import { Router } from '@angular/router';
   styleUrls: ['./createnotes.component.css']
 })
 export class CreatenotesComponent implements OnInit {
- 
-
-  // submitted = false;
+  createNote: FormGroup;
+  submitted = false;
   // loading = false;
   // loading = false;
   // id: string | null;
   // message = 'Añadir nota';
   constructor(
+    private fb: FormBuilder,
     private noteService: NotesService,
     private router: Router,) 
-    {}
-    
-    formNote = new FormGroup({
-      title: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required)
-    })
-    
-    //   this.id = this.aRoute.snapshot.paramMap.get('id');
-    //   console.log(this.id);
-
-    // }
+    {
+      this.createNote = this.fb.group({
+        title: ['', Validators.required],
+        description: ['', Validators.required]
+      })
+    }
 
   ngOnInit(): void {
-    // this.editNotesId()
   }
-  // ngOnInit(): void {
-  //   this.editNotesId()
+  
+  addNote(){
+    console.log(this.createNote.value)
+    // this.submitted = true;
+    // if(this.createNote.invalid){
+    //   return;
+    // }
+    // console.log(this.createNote);
+  //   const note: any = {
+  //     title: this.createNote.value.title,
+  //     description: this.createNote.value.description,
+  //     createDate: new Date(),
+  //     updateDate: new Date()
+  //   }
+    this.noteService.createNote(this.createNote.value).then((res: any) => {
+      console.log('nota agregada con exito', res);
+    })
+    .catch((er:any) =>{
+      console.log('nota no agregada', er);
+    })
   // }
-  // addEditNote(){
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// addEditNote(){
   //   this.submitted = true;
   //   if(this.formNote.invalid){
   //   return;
@@ -49,13 +139,13 @@ export class CreatenotesComponent implements OnInit {
   //   }
   // }
 
-  addNote(){
-    const note: any = {
-      title: this.formNote.value.title,
-      description: this.formNote.value.description,
-      createDate: new Date(),
-      updateDate: new Date()
-    }
+
+
+
+
+
+
+
   //     this.loading = true;
   //     this.noteService.addNote(note).then(() =>{
   //       this.toastr.success('Tu nota ha sido añadida!', 'Listo!');
@@ -99,5 +189,6 @@ export class CreatenotesComponent implements OnInit {
   //     })
   //   }
   // }
-  }
-}
+  
+
+

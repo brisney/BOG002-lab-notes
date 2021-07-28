@@ -18,11 +18,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 import { AuthService } from 'src/app/auth.services/auth.service';
-import { NotesComponent } from './components/notes/notes.component';
 import { NotesGuard } from './guards/guard.notes/notes.guard';
 import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
 import { NotesService } from './notes.services/notes.service';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
+import { ListnotesComponent } from './components/listnotes/listnotes.component';
+
 
 
 @NgModule({
@@ -32,10 +33,9 @@ import { CreatenotesComponent } from './components/createnotes/createnotes.compo
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    NotesComponent,
     CreatenotesComponent,
-
-
+    ListnotesComponent
+    
   ],
   imports: [
     BrowserModule,

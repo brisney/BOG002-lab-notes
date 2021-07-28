@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
   .registerByEmail(form)
       .then((re) => {
         console.log('registro exitoso', re);
-        this.route.navigate(['notas']);
+        this.route.navigate(['/notas']);
       })
       .catch((er) => console.log('registro no exitoso', er));
   }

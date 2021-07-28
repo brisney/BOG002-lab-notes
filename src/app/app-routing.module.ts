@@ -4,11 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import { NotesComponent } from './components/notes/notes.component';
 import { NotesGuard } from './guards/guard.notes/notes.guard';
 import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
-// import { CreatenotesComponent } from './components/createnotes/createnotes.component';
+import { ListnotesComponent } from './components/listnotes/listnotes.component';
 
 const routes: Routes = [
   {
@@ -35,7 +34,7 @@ const routes: Routes = [
   {
     path: 'notas',
     canActivate: [NotesGuard],
-    component: NotesComponent,
+    component: ListnotesComponent,
   }, 
   {
     path: 'crear-nota',

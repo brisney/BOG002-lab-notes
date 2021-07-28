@@ -31,7 +31,7 @@ export class NotesGuard implements CanActivate {
           window.alert(
             'Acceso denegado, es necesario iniciar sesión para acceder a esta página.'
           );
-          this.router.navigate(['/Iniciarsesion']);
+          this.router.navigate(['/iniciar-sesion']);
         }
       })
     );
