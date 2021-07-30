@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-// import { Notes } from 'src/assets/notes.interface';
-// import * as firebase from "firebase"
 import firebase  from 'firebase/app';
 
 
@@ -10,7 +8,7 @@ import firebase  from 'firebase/app';
   providedIn: 'root'
 })
 export class NotesService {
-
+collectionName = "Notes"
 
   constructor(private firestore: AngularFirestore,) { 
   }
@@ -18,16 +16,14 @@ export class NotesService {
    // crea una nota en firebase
     // parametro note nota a crear
     createNote(note: any): Promise<any>{
-      return this.firestore.collection('Notes').add({...note, createAt: firebase.firestore.Timestamp.now()
-
+      return this.firestore.collection(this.collectionName).add({...note, createAt: firebase.firestore.Timestamp.now()
       })
     }
   
     // Metodo para listar todas las notas
-   
-  //  getNotes(): Observable<any> {
-  //   return this.firestore.collection('Notes', ref => ref.orderBy('creationDate','asc')).snapshotChanges();
-  // }
+   getNotes(): Observable<any> {
+    return this.firestore.collection(this.collectionName).snapshotChanges();
+  }
 
   // metodo para obtener el id de cada nota
   // getNote(id: any): Observable<any> {

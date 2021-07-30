@@ -2,7 +2,7 @@
   <div>
   <h3>Agregar nota</h3>
   <!-- <span *ngIf="submitted && createNote.invalid" class="badge">TODOS LOS CAMPOS SON OBLIGATORIOS</span> -->
-  <form [formGroup]="createNote" (ngSubmit)="addNote()">
+  <form [formGroup]="createNote">
      <div >
         <input type="text" formControlName="title" class="form-Title" placeholder="Título de la nota">
      </div>
@@ -10,8 +10,8 @@
         <input type="text" formControlName="description" class="form-Description" placeholder="Descripción de la nota">
      </div>
      <div>
-        <button type="submit" class="btn">Crear nota</button>
-        <button type="text" class="btn-back"  routerLink="/notas">Cancelar</button>
+        <button type="button" class="btn" (click)="addNote($event)">Crear nota</button>
+        <button type="button" class="btn-back"  routerLink="/notas">Cancelar</button>
      </div>
   </form> 
 </div>

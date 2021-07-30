@@ -30,26 +30,19 @@ export class CreatenotesComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  addNote(){
+  addNote(event:any){
     console.log(this.createNote.value)
     // this.submitted = true;
     // if(this.createNote.invalid){
     //   return;
     // }
-    // console.log(this.createNote);
-  //   const note: any = {
-  //     title: this.createNote.value.title,
-  //     description: this.createNote.value.description,
-  //     createDate: new Date(),
-  //     updateDate: new Date()
-  //   }
     this.noteService.createNote(this.createNote.value).then((res: any) => {
       console.log('nota agregada con exito', res);
+      this.router.navigate(['notas']);
     })
     .catch((er:any) =>{
       console.log('nota no agregada', er);
     })
-  // }
 }
 }
 
