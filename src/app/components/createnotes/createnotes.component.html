@@ -1,16 +1,16 @@
 <div class="form-Note">
   <div>
-  <h3>Agregar nota</h3>
+  <h2>Agregar nota</h2>
   <!-- <span *ngIf="submitted && createNote.invalid" class="badge">TODOS LOS CAMPOS SON OBLIGATORIOS</span> -->
   <form [formGroup]="createNote">
      <div >
-        <input type="text" formControlName="title" class="form-Title" placeholder="Título de la nota">
+        <input type="text" formControlName="title" class="form-Title" placeholder="Título de la nota" autofocus>
      </div>
      <div>
-        <input type="text" formControlName="description" class="form-Description" placeholder="Descripción de la nota">
+      <textarea name="texto" formControlName="description" rows="10" class="form-Description" placeholder="Descripción de la nota"></textarea>
      </div>
      <div>
-        <button type="button" class="btn" (click)="addNote($event)">Crear nota</button>
+        <button type="button" class="btn" (click)="addNote($event)">Crear</button>
         <button type="button" class="btn-back"  routerLink="/notas">Cancelar</button>
      </div>
   </form> 

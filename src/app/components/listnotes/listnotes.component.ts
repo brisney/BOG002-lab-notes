@@ -33,30 +33,23 @@ export class ListnotesComponent implements OnInit {
       .catch((er) => console.log('no se puede cerrar sesión', er));
   }
  
-    // cargando todos los estudiantes de firebase
+    // pintando todas las notas de firebase
     getNotes(): void {
       this.noteService.getNotes().subscribe(data =>{
         this.notes = data.map((element: any) => ({
           title: element.payload.doc.data().title,
           description: element.payload.doc.data().description,
-          idFirebase: element.payload.doc.id 
+          id: element.payload.doc.id 
           })
         );
           console.log(this.notes);
       });
     }
 
-
-
-
-
-
-
-
-  // deleteNotes(id: any) {
-  //   this.noteService.deleteNote(id).then((res) =>{
-  //     console.log('Nota eliminada', res);
-  //   }).catch((er) => console.log('No se puede eliminar nota', er));
-  // }
+  deleteNote(id: any) {
+    this.noteService.deleteNote(id).then((res) =>{
+      console.log('Nota eliminada', res);
+    }).catch((er) => console.log('No se puede eliminar nota', er));
+  }
 
 }

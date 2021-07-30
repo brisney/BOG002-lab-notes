@@ -1,33 +1,47 @@
-<div class="homeNotes">
+<div class="home-Notes">
     <a routerLink="/crear-nota"
-      ><img class="imgNotes" src="./assets/imagen agregar notas.png"
+      ><img class="img-Notes" src="./assets/imagen agregar notas.png"
     /></a>
-    <h2 class="listNotes">Todas las notas</h2>
-    <button class="buttonLogout" (click)="logout()">Cerrar sesión</button>
+    <h2 class="list-Notes">Todas las notas</h2>
+    <button class="btn-Logout" (click)="logout()">Cerrar sesión</button>
 </div>
-<div>
+<!-- <div> -->
     <!-- <h2 *ngIf="notes.length == 0">No hay notas para mostrar</h2> -->
-    <!-- <ul class="notas" *ngIf="notes.length > 0">
-      <li *ngFor="let note of notes">
-       <div class="badge">{{ note.title }}</div>
-        <span class="badge">{{ note.description }}</span> 
-      </li>
-    </ul>
-</div> -->
+    <!-- <ul class="notas" *ngIf="notes.length > 0"> -->
+      <!-- <div *ngFor="let note of notes">
+       <span class="badge"> <strong>{{ note.title }}</strong></span> 
+       <br> -->
+        <!-- <span class="badge">{{ note.description }}</span>  -->
+                <!-- <pre class="badge" rows="10">{{ note.description }}</pre> 
+
+      </div> -->
+
+    <!-- </ul> -->
+<!-- </div> -->
   
-<table *ngIf="notes.length > 0" class="table">
+<table width="80%">
   <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Descripción</th>
-      <th></th>
-    </tr>
+  <tr>
+    <th class="title-table">Título nota</th>
+    <th class="title-table">Acciones</th>
+  </tr>
   </thead>
-  <tbody>
-    <tr *ngFor="let note of notes">
-      <td>{{ note.title }}</td>
-      <td>{{ note.description }}</td>
-    </tr>
-  </tbody>
+  <tr *ngFor="let note of notes">
+    <td>
+      {{note.title}}
+    </td>
+    <td>
+      <a class="btn btn-primary active" role="button"
+         routerLinkActive="active">Detalle</a>
+    </td>
+    <td>
+      <a><img class="img-Editar" src="./assets/img.editar.png"
+      /></a>
+    <!-- </td>
+    <td> -->
+      <i (click)="deleteNote(note.id)"><img class="img-Eliminar" src="./assets/imgen.eliminar.jpg"
+      /></i>
+      <!-- <button type="button" (click)="deleteNote(note.id)" class="btn-Eliminar">Eliminar</button> -->
+    </td>
+  </tr>
 </table>
-</div>
