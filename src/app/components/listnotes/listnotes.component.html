@@ -18,8 +18,9 @@
 
     <!-- </ul> -->
 <!-- </div> -->
-  
-<table width="80%">
+<div>
+<h2 *ngIf="notes.length == 0">No hay notas para mostrar</h2>
+<table *ngIf="notes.length > 0" width="90%">
   <thead>
   <tr>
     <th class="title-table">Título nota</th>
@@ -31,17 +32,18 @@
       {{note.title}}
     </td>
     <td>
-      <a class="btn btn-primary active" role="button"
+      <a class="btn-Detalle" role="button"
          routerLinkActive="active">Detalle</a>
     </td>
     <td>
-      <a><img class="img-Editar" src="./assets/img.editar.png"
+      <a [routerLink]="['/editNote/', note.id]"><img class="img-Editar" src="./assets/img.editar.png"
       /></a>
     <!-- </td>
     <td> -->
-      <i (click)="deleteNote(note.id)"><img class="img-Eliminar" src="./assets/imgen.eliminar.jpg"
+      <i (click)="deleteNote(note.id)"><img class="img-Eliminar" src="./assets/imagen.eliminar.png"
       /></i>
       <!-- <button type="button" (click)="deleteNote(note.id)" class="btn-Eliminar">Eliminar</button> -->
     </td>
   </tr>
 </table>
+</div>

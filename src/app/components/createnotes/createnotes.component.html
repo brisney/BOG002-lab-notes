@@ -1,6 +1,6 @@
 <div class="form-Note">
   <div>
-  <h2>Agregar nota</h2>
+  <h2>{{ titulo }}</h2>
   <!-- <span *ngIf="submitted && createNote.invalid" class="badge">TODOS LOS CAMPOS SON OBLIGATORIOS</span> -->
   <form [formGroup]="createNote">
      <div >
@@ -10,7 +10,7 @@
       <textarea name="texto" formControlName="description" rows="10" class="form-Description" placeholder="Descripción de la nota"></textarea>
      </div>
      <div>
-        <button type="button" class="btn" (click)="addNote($event)">Crear</button>
+        <button type="button" class="btn" (click)="addEditNote($event)">Crear</button>
         <button type="button" class="btn-back"  routerLink="/notas">Cancelar</button>
      </div>
   </form> 

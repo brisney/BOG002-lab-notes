@@ -39,7 +39,11 @@ const routes: Routes = [
   {
     path: 'crear-nota',
     component: CreatenotesComponent,
-  }
+  },
+  {
+  path: 'editNote/:id',
+  component: CreatenotesComponent,
+}
 
 ];
 

@@ -27,29 +27,18 @@ collectionName = "Notes"
 
    // borrar una nota existente en firebase
     // parametro id id de la coleccion en firebase
-    deleteNote(id:any): Promise<any>{
+    deleteNote(id:string): Promise<any>{
       return this.firestore.collection(this.collectionName).doc(id).delete();
   
     }
   
-
-
-
-
-
-
-
   // metodo para obtener el id de cada nota
-  // getNote(id: any): Observable<any> {
-  //   return this.firestore.collection('Notes').doc(id).snapshotChanges();
-  // }
-  
-  
-    // actualiza una nota existente en firebase
-    // parametro id id de la coleccion en firebase
-    // parametro note nota a actualizar
-  //  updateNote(id:any, data:any): Promise<any>{
-  //   return this.firestore.collection("notes").doc(id).update(data);
-  // }
+  getNoteEdit(id: string): Observable<any> {
+    return this.firestore.collection(this.collectionName).doc(id).snapshotChanges();
+  }
 
+    // actualiza una nota existente en firebase
+   updateNote(id: any,nota: any): Promise<any>{
+    return this.firestore.collection(this.collectionName).doc(id).update(nota);
+  }
 }
