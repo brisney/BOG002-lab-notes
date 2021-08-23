@@ -6,9 +6,9 @@
   }
   .title{
     margin-left:70px;
-    margin-top:40px; 
+    margin-top:46px; 
     font-size: 45px;
-    font-family: Mogra;
+    font-family: 'Mogra', cursive;
     color: #FFFFFF;
   }
 
@@ -26,6 +26,7 @@
   display: block;
   background: #504d4d;
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
   padding-top: 15px;
   border: 1px solid #868282;
   color: rgb(247, 243, 243);
@@ -71,7 +72,7 @@ input[type=checkbox] {
   width: 35px;
   left:20px;
   top:48px;
-  display: none
+  display:block;
 }
 .spinner {
   transition: all 0.3s;
@@ -121,8 +122,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 
-@media screen and (min-width: 768px) {
-    .sidebarIconToggle{
-        display:block
-     }
+@media screen and (min-width:1024px) {
+  .sidenav{
+    padding-bottom: 130px;
+  }
+    /* .sidebarIconToggle{
+        display:block;
+     } */
   }

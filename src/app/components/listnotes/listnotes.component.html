@@ -1,19 +1,19 @@
-<div class="home-Notes">
-  <a routerLink="/crear-nota"><img class="img-Notes" src="./assets/imagen agregar notas.png" /></a>
-  <h2 class="title-Notes">Todas las notas</h2>
+<div class="home-notes">
+  <a routerLink="/crear-nota"><img class="img-notes" src="./assets/imagen agregar notas.png" /></a>
+  <h2 class="title-notes">Todas las notas</h2>
   <!-- <button class="btn-Logout" (click)="logout()">Cerrar sesión</button> -->
-  <a href="#" (click)="logout()"><img class="btn-Logout" src="./assets/img.cerrarsesión.png" /></a>
+  <a href="#" (click)="logout()"><img class="btn-logout" src="./assets/img.cerrarsesión.png" /></a>
 </div>
 
-<section class="cont-Notes">
+<section class="cont-notes">
   <h3 *ngIf="notes.length == 0">No hay notas para mostrar</h3>
   <div *ngIf="notes.length > 0">
-    <div *ngFor="let note of notes" class="list-Notes">
-      <div class="jj">
-        <a [routerLink]="['/editar-nota/', note.id]"><img class="img-Editar" src="./assets/img.editar.png" /></a>
-        <i (click)="deleteNote(note.id)"><img class="img-Eliminar" src="./assets/imagen.eliminar.png" /></i>
+    <div *ngFor="let note of notes" class="list-notes">
+      <div class="options">
+        <a [routerLink]="['/editar-nota/', note.id]"><img class="img-editar" src="./assets/img.editar.png" /></a>
+        <i (click)="deleteNote(note.id)"><img class="img-eliminar" src="./assets/imagen.eliminar.png" /></i>
       </div>
-      <div class="detail-Note">
+      <div class="detail-note">
         <h2>{{note.title}}</h2>
         <br/>
         <p>{{note.description}}</p>
@@ -21,6 +21,12 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
 
 
 

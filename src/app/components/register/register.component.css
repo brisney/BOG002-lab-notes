@@ -1,9 +1,9 @@
-.formRegister{
+.form-register{
     display:flex;
     flex-direction:column;
     padding:99px; 
 }
-.imgRegister{
+.img-register{
     width: 24vw;
     height: 19vh;
     margin-left: 26vw;
@@ -12,12 +12,14 @@ h1{
     text-align: center;
     font-size: 47px;
     margin-top: 1.5vh;
+    font-family: 'Alike', serif;
 }
 
 input{
     height: 7vh;
     width: 72vw;
     font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
 }
 .email{
     margin-top:2vh;
@@ -32,4 +34,36 @@ input{
     height: 7vh;
     width: 73vw;
     font-size: 30px;
+    font-family: 'Noto Sans', sans-serif;
 }
+
+
+@media screen and (min-width:1024px) {
+    .form-register{
+        flex-wrap: wrap;
+        align-items: center;
+        padding:0px; 
+    }
+    .img-register{
+        width: 11vw;
+        height: 20vh;
+        margin-top: 4vw;
+        margin-right: 28vw;
+    }
+    h1{
+        font-size: 40px;
+    }
+    form{
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    input{
+        height: 7vh;
+        width: 43vw;
+    }
+    .register{
+        width: 43.5vw;    
+    }
+    }

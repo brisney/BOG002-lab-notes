@@ -1,28 +1,33 @@
-.home-Notes{
+.home-notes{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 3vw;
 }
-.img-Notes{
+.img-notes{
     width: 9vw;
     height: 10vh;
 }
-.title-Notes{
+.title-notes{
     margin-top: 12vh;
     font-size: 5vw;
+    font-family: 'Roboto', sans-serif;
 }
-.btn-Logout{
+.btn-logout{
     height: 8vh;
     width: 8vh;
     margin-top: 1vh;
-    /* background: #D2BCBC; */
 } 
-.cont-Notes{
+.cont-notes{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
-.list-Notes{
+h3{
+    font-size: 4vw;
+    margin-left: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+.list-notes{
     display: flex;
     flex-direction: row;
     width: 600px; 
@@ -32,52 +37,85 @@
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 30px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 30px;
     transform: scale(1);
     transition: 0.3s transform;
 }
-.list-Notes:hover{
+.list-notes:hover{
     transform: scale(1.2);
 }
-
-.detail-Note{
-    display: inline-block;
-    /* width: 600px; 
-    border: 3px solid #555;
-    background: #D2BCBC;
-    border-radius:65px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 30px;
-    padding: 20px 20px 20px 20px; */
-}
-h3{
-    font-size: 4vw;
-    margin-left: 50px;
-
-}
-h2{
-    font-size: 4vw;
-}
-p{
-    white-space:pre-wrap;
-    font-size: 3vw;
-}
-.jj{
+.options{
     position: absolute;
-    right: 100px;
+    right: 25px;
     /* margin: 50px; */
 }
-.img-Editar{
+.img-editar{
     width: 5vw;
     height: 4vh;
     
 }
-.img-Eliminar{
+.img-eliminar{
     width: 5vw;
     height: 4vh;
     margin-left: 15px;
 }
+.detail-note{
+    display: inline-block;
+}
+h2{
+    font-size: 4vw;
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    white-space:pre-wrap;
+    font-size: 3vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+@media screen and (min-width:1024px) {
+    .img-notes{
+        width: 4vw;
+        height: 9vh;
+    }
+    .title-notes{
+        margin-top: 10vh;
+        font-size: 2vw;
+        font-family: 'Roboto', sans-serif;
+    }
+    .cont-notes{
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+    }
+    h3{
+        font-size: 1.5vw;
+    }
+    .list-notes{
+        width: 250px; 
+        padding: 12px 12px 12px 10px;
+        height: 160px;
+        border-radius:15px;
+    }
+    .options{
+        right: 10px;
+    }
+    .img-editar{
+        width: 2vw;
+        height: 3.5vh;
+    }
+    .img-eliminar{
+        width: 2vw;
+        height:3.5vh;
+    }
+    h2{
+        font-size: 1.5vw;
+    }
+    p{
+        font-size: 1vw;
+    }
+
+    }
 
 
 

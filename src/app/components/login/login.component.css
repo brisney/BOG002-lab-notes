@@ -1,15 +1,16 @@
-.formLogin{
+.form-login{
     display:flex;
     flex-direction:column;
     padding:75px; 
 }
-.imgLogin{
+.img-login{
     width: 24vw;
     height: 19vh;
     margin-left: 28vw;
 }
 h1{
     text-align: center;
+    font-family: 'Alike', serif;
     font-size: 47px;
     margin-top: 1.5vh;
 }
@@ -19,6 +20,7 @@ input{
     width: 72vw;
     font-size: 30px;
     margin-left: 24px;
+    font-family: 'Noto Sans', sans-serif;
 }
 .email{
     margin-top:2vh;
@@ -34,6 +36,7 @@ input{
     width: 73vw;
     font-size: 30px;
     margin-left: 24px;
+    font-family: 'Noto Sans', sans-serif;
 }
 .texto{
     display:inline-block;
@@ -41,8 +44,7 @@ input{
     text-align: center;
     margin-top: 3vh;
     font-size: 28px; 
-    margin-left: px;
-
+    /* margin-left: 2px; */
 }
 .texto::after,.texto::before{
 content:'';
@@ -59,18 +61,71 @@ top: 0.3em;
     right: 34px; 
 
 }
-.loginGoogle{
+.login-google{
     margin-top:2vh;
     background: #ffffff;
     height: 7vh;
     width: 73vw;
     font-size: 30px; 
     margin-left: 24px; 
+    font-family: 'Noto Sans', sans-serif;
 }
-.imgGoogle{
+.img-google{
     width: 8vw;
     height: 6vh;
     position: absolute;
     margin-top: 61.5vh;
     margin-left: 12vw;
 }
+
+@media screen and (min-width:1024px) {
+    .form-login{
+        flex-wrap: wrap;
+        align-items: center;
+        padding:0px; 
+    }
+    .img-login{
+        width: 11vw;
+        height: 20vh;
+        margin-top: 4vw;
+        margin-right: 28vw;
+    }
+    h1{
+        font-size: 40px;
+    }
+    form{
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    input{
+        height: 7vh;
+        width: 43vw;
+    }
+    .login{
+        width: 43.5vw;    
+    }
+    .texto{
+        margin-left: 25px;
+    }
+    .texto::after,.texto::before{
+        width: 20vw;
+    }
+    .texto::before{
+        left: 36px;
+     }
+    .texto::after{
+         right: 36px; 
+    }
+    .login-google{
+        width: 43.5vw;
+    }
+    .img-google{
+        width: 4vw;
+        height: 6vh;
+        position: absolute;
+        margin-top: 74vh;
+        left: 24vw;
+    }
+    }

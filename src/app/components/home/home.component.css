@@ -5,7 +5,7 @@
     padding:13VW
 }
 
-.imgHome{
+.img-home{
     width: 73.5vw;
     height: 38vh;
 }
@@ -13,9 +13,24 @@
     font-size: 35px;
     margin-top: 6vh;
     text-align: center;
-
+    font-family: 'Cantata One', serif;
 }
 .paragraph{
     font-size: 28px;
     margin-top: 2vh;
+    text-align: center;
+    font-family: 'Arya', sans-serif;
+}
+
+@media screen and (min-width:1024px) { 
+    .img-home{
+        width:73vw;
+        height: 68vh;
+    }
+    .title{
+        margin-top: 10vh;
+    }
+    .paragraph{
+        margin-top: 3vh;
+    }
 }

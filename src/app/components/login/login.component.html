@@ -1,7 +1,7 @@
 <app-sidenav></app-sidenav>
 
-<div class="formLogin">
-  <img class="imgLogin" src="./assets/img logo notas.png">
+<div class="form-login">
+  <img class="img-login" src="./assets/img logo notas.png">
   <h1>Iniciar sesión</h1>
   <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
     <input type="texto" formControlName="email" placeholder="correo electrónico" class="email" />
@@ -9,6 +9,6 @@
     <button type="submit" class="login">Continuar</button>
   </form>
   <p class="texto">O</p>
-  <button (click)="onGoogleLogin()" class="loginGoogle">Ingresar con Google</button>
-  <img class="imgGoogle" src="./assets/Imagn Google.png">
+  <button (click)="onGoogleLogin()" class="login-google">Ingresar con Google</button>
+  <img class="img-google" src="./assets/Imagn Google.png">
 </div>
