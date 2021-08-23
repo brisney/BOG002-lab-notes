@@ -1,38 +1,39 @@
 .formLogin{
-    top:100vh; 
     display:flex;
     flex-direction:column;
-    padding:17VW;
+    padding:75px; 
 }
 .imgLogin{
-    width: 26vw;
-    height: 21vh;
-    margin-left: 20vw;
+    width: 24vw;
+    height: 19vh;
+    margin-left: 28vw;
 }
 h1{
     text-align: center;
     font-size: 47px;
-    margin: 2.6vh;
+    margin-top: 1.5vh;
 }
 
 input{
     height: 7vh;
-    width: 63vw;
-    font-size: 30px
+    width: 72vw;
+    font-size: 30px;
+    margin-left: 24px;
 }
 .email{
-    margin-top:3vh;
+    margin-top:2vh;
 }
 
 .password{
-    margin-top:2vh;
+    margin-top:1.5vh;
 }
 .login{
     margin-top:2vh;
     background: #D2BCBC;
     height: 7vh;
-    width: 64vw;
+    width: 73vw;
     font-size: 30px;
+    margin-left: 24px;
 }
 .texto{
     display:inline-block;
@@ -40,34 +41,36 @@ input{
     text-align: center;
     margin-top: 3vh;
     font-size: 28px; 
+    margin-left: px;
 
 }
 .texto::after,.texto::before{
 content:'';
 position:absolute;
-width: 26vw;
-height: 0.2vh;
+width: 32vw;
+height: 0.3vh;
 background-color: black;
 top: 0.3em;
 }
 .texto::before{
-    left: 4px;
+    left: 27px;
 }
 .texto::after{
-    right: 14px; 
+    right: 34px; 
 
 }
 .loginGoogle{
     margin-top:2vh;
     background: #ffffff;
     height: 7vh;
-    width: 64vw;
-    font-size: 30px;  
+    width: 73vw;
+    font-size: 30px; 
+    margin-left: 24px; 
 }
 .imgGoogle{
     width: 8vw;
     height: 6vh;
     position: absolute;
-    margin-top: 67.2vh;
-    margin-left: 5vw;
+    margin-top: 61.5vh;
+    margin-left: 12vw;
 }

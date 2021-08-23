@@ -1,6 +1,6 @@
 h2{
     text-align: center;
-    font-size: 29px
+    font-size: 30px
 }
 .form-Note{
     padding: 15vw;
@@ -11,22 +11,25 @@ h2{
 .form-Title{
     height: 5vh;
     width: 58vw;
-    font-size: 27px;
+    font-size: 28px;
     background: #D2BCBC;
     margin-bottom: 1vh;
 }
 .form-Description{
     height: 20vh;
     width: 58.2vw; 
-    font-size: 25px;
+    font-size: 26px;
     background: #D2BCBC;        
 }
 
 button{
-    width: 22vw;
+    width: 29vw;
     height: 4.5vh;
-    font-size: 24px;
+    font-size: 25px;
     color: ghostwhite;
     background:#A97B7B;
+}
+.btn-back{
+    margin-left: 8px;
 }
     

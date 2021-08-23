@@ -1,49 +1,49 @@
 <div class="home-Notes">
-    <a routerLink="/crear-nota"
-      ><img class="img-Notes" src="./assets/imagen agregar notas.png"
-    /></a>
-    <h2 class="list-Notes">Todas las notas</h2>
-    <button class="btn-Logout" (click)="logout()">Cerrar sesión</button>
+  <a routerLink="/crear-nota"><img class="img-Notes" src="./assets/imagen agregar notas.png" /></a>
+  <h2 class="title-Notes">Todas las notas</h2>
+  <!-- <button class="btn-Logout" (click)="logout()">Cerrar sesión</button> -->
+  <a href="#" (click)="logout()"><img class="btn-Logout" src="./assets/img.cerrarsesión.png" /></a>
 </div>
-<!-- <div> -->
-    <!-- <h2 *ngIf="notes.length == 0">No hay notas para mostrar</h2> -->
-    <!-- <ul class="notas" *ngIf="notes.length > 0"> -->
-      <!-- <div *ngFor="let note of notes">
-       <span class="badge"> <strong>{{ note.title }}</strong></span> 
-       <br> -->
-        <!-- <span class="badge">{{ note.description }}</span>  -->
-                <!-- <pre class="badge" rows="10">{{ note.description }}</pre> 
 
-      </div> -->
+<section class="cont-Notes">
+  <h3 *ngIf="notes.length == 0">No hay notas para mostrar</h3>
+  <div *ngIf="notes.length > 0">
+    <div *ngFor="let note of notes" class="list-Notes">
+      <div class="jj">
+        <a [routerLink]="['/editar-nota/', note.id]"><img class="img-Editar" src="./assets/img.editar.png" /></a>
+        <i (click)="deleteNote(note.id)"><img class="img-Eliminar" src="./assets/imagen.eliminar.png" /></i>
+      </div>
+      <div class="detail-Note">
+        <h2>{{note.title}}</h2>
+        <br/>
+        <p>{{note.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- </ul> -->
-<!-- </div> -->
-<div>
-<h2 *ngIf="notes.length == 0">No hay notas para mostrar</h2>
-<table *ngIf="notes.length > 0" width="90%">
-  <thead>
-  <tr>
-    <th class="title-table">Título nota</th>
-    <th class="title-table">Acciones</th>
-  </tr>
-  </thead>
-  <tr *ngFor="let note of notes">
-    <td>
-      {{note.title}}
-    </td>
-    <td>
-      <a class="btn-Detalle" role="button"
-         routerLinkActive="active">Detalle</a>
-    </td>
-    <td>
-      <a [routerLink]="['/editNote/', note.id]"><img class="img-Editar" src="./assets/img.editar.png"
-      /></a>
-    <!-- </td>
-    <td> -->
-      <i (click)="deleteNote(note.id)"><img class="img-Eliminar" src="./assets/imagen.eliminar.png"
-      /></i>
-      <!-- <button type="button" (click)="deleteNote(note.id)" class="btn-Eliminar">Eliminar</button> -->
-    </td>
-  </tr>
-</table>
-</div>
+
+
+<!-- <table *ngIf="notes.length > 0" width="90%">
+        <thead>
+          <tr>
+            <th class="title-table">Título nota</th>
+            <th class="title-table">Opción</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let note of notes">
+          <td>
+            {{note.title}}
+          </td>
+          <td>
+            <a [routerLink]="['/detalle-nota']" class="btn-Detalle">Detalle</a>
+          </td>
+          <td>
+            <a [routerLink]="['/editar-nota/', note.id]"><img class="img-Editar" src="./assets/img.editar.png" /></a>
+          </td>
+          <td>
+            <i (click)="deleteNote(note.id)"><img class="img-Eliminar" src="./assets/imagen.eliminar.png" /></i>
+          </td>
+        </tr>
+      </table>
+    </div> -->

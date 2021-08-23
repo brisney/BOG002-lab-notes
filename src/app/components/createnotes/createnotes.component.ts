@@ -53,6 +53,7 @@ export class CreatenotesComponent implements OnInit {
       console.log('nota no agregada', er);
     })
 }
+
 //  función para traer los valores de crear nota a editar nota
 valueEditNote(){
   if (this.id !== null) {
@@ -66,6 +67,7 @@ valueEditNote(){
   }
 }
 
+// metodo a ejecutar segun la petición, si se crea o edita nota
 addEditNote(event:any){
   if(this.id === null){
     this.addNote();

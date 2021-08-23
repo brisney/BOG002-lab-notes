@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth.services/auth.service';
 import { Router } from '@angular/router';
 import { NotesService } from 'src/app/notes.services/notes.service';
-import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-listnotes',
@@ -13,7 +12,6 @@ export class ListnotesComponent implements OnInit {
   notes: any[] = [];
 
   constructor(
-    // firestore: AngularFirestore,
     private auth: AuthService,
     private router: Router,
     private noteService: NotesService

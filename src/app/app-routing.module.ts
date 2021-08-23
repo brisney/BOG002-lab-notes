@@ -8,6 +8,7 @@ import { NotesGuard } from './guards/guard.notes/notes.guard';
 import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 import { ListnotesComponent } from './components/listnotes/listnotes.component';
+import { DetailnoteComponent } from './components/detailnote/detailnote.component';
 
 const routes: Routes = [
   {
@@ -41,8 +42,12 @@ const routes: Routes = [
     component: CreatenotesComponent,
   },
   {
-  path: 'editNote/:id',
+  path: 'editar-nota/:id',
   component: CreatenotesComponent,
+},
+{
+  path: 'detalle-nota',
+  component: DetailnoteComponent,
 }
 
 ];

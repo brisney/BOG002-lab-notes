@@ -23,6 +23,7 @@ import { CheckloginGuard } from './guards/guard.checklogin/checklogin.guard';
 import { NotesService } from './notes.services/notes.service';
 import { CreatenotesComponent } from './components/createnotes/createnotes.component';
 import { ListnotesComponent } from './components/listnotes/listnotes.component';
+import { DetailnoteComponent } from './components/detailnote/detailnote.component';
 
 
 
@@ -34,8 +35,8 @@ import { ListnotesComponent } from './components/listnotes/listnotes.component';
     RegisterComponent,
     LoginComponent,
     CreatenotesComponent,
-    ListnotesComponent
-    
+    ListnotesComponent,
+    DetailnoteComponent 
   ],
   imports: [
     BrowserModule,
