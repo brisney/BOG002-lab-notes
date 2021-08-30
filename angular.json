@@ -103,7 +103,10 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "baseHref": "https://brisney.github.io/BOG002-lab-notes/"
+          }
+        
         }
       }
     }
